@@ -1,0 +1,609 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* text-align: center; */
+  }
+
+  /* RESPONSIVE FLEX LAYOUT
+  ......................................................... */
+  
+  /* Style the header */
+  .header {
+    background-color: #ffffff;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Container for flexboxes */
+  .row {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Create a middle column*/
+  .column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10 px;
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #ffffff;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgb(185, 185, 185);;
+  }
+
+  /* Modify the position of the elements according to the window size */
+  @media (max-width: 600px) {
+    .menu-text,
+    .icon {
+      display: none;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .call-us {
+      display: none;
+    }
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+
+    /* .interior,
+    .building,
+    .all{
+      text-align: left;
+    } */
+  }
+
+  @media (max-width: 1200px) {
+    .imageTextBig {
+      font-size: 5px;
+    }
+    .copyrights{
+      display: none;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .firstList,
+    .secondList{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+
+
+/*......................................................... */
+
+/* MENU
+  ......................................................... */
+
+/*Style the brand logo*/
+.logo{
+    cursor: pointer;
+    float: left;
+  }
+
+/* Style the phone contact section*/
+.call-us{
+  float: left; 
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(107, 106, 106);
+}
+
+.phone-number{
+  color: black;
+}
+
+ /* Style the social media icons*/
+.socials{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 17px;
+    height: 17px; 
+    cursor: pointer;
+    margin: 12px;
+}
+
+/* Style the dropdown menu*/
+.menu{
+    display:inline-flex;
+    align-items: center;
+}
+
+.drop-button {
+  background-color: transparent;
+  color:white;
+  padding: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  min-width: 1px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {background-color:#c8d819;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu-text{ 
+  padding-right: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+/*......................................................... */
+
+/* SLIDESHOW
+  ......................................................... */
+  #slider {
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#slide{
+    position: relative;
+    width: 100%;
+}
+
+/* Style the "previous" and "next" buttons of the slideshow*/
+#precedent,
+#suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 70px;
+    color: rgba(255, 255, 255, 0.8);
+    /* background-color: rgba(83, 83, 83, 0.8); */
+    padding: 10px;
+}
+
+#precedent {
+    left: 0;
+}
+
+#suivant {
+    right: 0;
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+    opacity: 1;
+}
+
+/* Style the text over the slideshow */
+.imageText{
+    position: absolute; 
+    padding-left: 20%;
+    padding-bottom: 30%;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+}
+
+.imageTextBig{
+    position: absolute; 
+    padding-left: 20%;
+    padding-bottom: 12%;
+    font-size: 4vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    line-height: 1.1;
+}
+
+/* Style the rectangle shape over the slider */
+.rectangle{
+  position: absolute;
+  width: 20%; 
+  height: 75%;
+  left: 15%;
+  border: 5px solid #c8d819 ;
+}
+
+.rectangle::before{
+  content: "";
+  display: block;
+  padding-top: 25%; 
+}
+/*......................................................... */
+
+/* 'ABOUT' ROW
+  ......................................................... */
+.about{
+    padding: 50px;
+}
+
+.left,
+.right{
+  padding: 20px;
+}
+
+/* Style the section name text */
+.aboutUs{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #c8d819;
+    text-transform: uppercase;
+}
+/* Style the headline */
+.aboutBig{
+    padding-top: 20px;
+    font-weight: 620;
+    font-size: 40px;
+    line-height: 1;
+}
+
+/* Style the paragraph */
+.aboutText{
+    padding-top: 70px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 2.2;
+    color: rgb(107, 106, 106);
+}
+
+/* Style the experience number*/
+.experience-number{
+  display: flex;
+  font-size: 100px;
+  font-weight: 650; 
+  justify-content: right;
+  align-items: right;
+  padding: 0;
+  margin: 0;
+}
+/* Style the experience text */
+/* .experience-text{
+  position: relative;
+  display: flex;
+  font-size: 23px;
+  line-height: 1.2;
+  justify-content: center;
+} */
+
+/* style the right column image */
+.imageAbt{
+    max-width: 80%;
+    margin-left: 20%; 
+}
+/*......................................................... */
+
+/* 'LATEST PROJECTS' TITLE ROW
+  ......................................................... */
+
+.latest{
+  display: flex;
+  align-items: center;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  justify-content: space-between;
+}
+
+.latestProj{
+  font-weight: 620;
+  font-size: 40px;
+}
+
+.all{
+  font-weight: bold;
+  cursor: pointer;
+  color: #c8d819;
+  text-align: right;
+}
+
+.building,
+.interior{
+  text-align: right;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.building:hover{
+  color: #c8d819;
+}
+
+.interior:hover{
+  color: #c8d819;
+}
+  /*......................................................... */
+
+  /* 'LATEST PROJECTS' GALLERY ROW
+  ......................................................... */
+.projects{
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.gallery {
+  border: 15px solid rgb(255, 255, 255);
+}
+
+.gallery:hover{
+  color: #c8d819;
+}
+
+/* div.gallery:hover {
+  border: 3px solid #c8d819;
+} */
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* slide overlay */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #c8d819;
+  opacity: 90%;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  /* font-size: 30px; */
+  font-size: 3vw;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.text2{
+  color: rgb(59, 59, 59);
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: left;
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*......................................................... */
+
+/* 'NEWS' ROW
+  ......................................................... */
+.news-title{
+  padding-left: 4%;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.news{
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+}
+
+div.newsCol{
+  border: 15px solid rgb(255, 255, 255);
+}
+
+.imageNews{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.containerNews {
+  position: relative;
+  width: 50%;
+}
+
+.overlayNews {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid #c8d819;
+}
+
+.containerNews:hover .overlayNews {
+  opacity: 1;
+}
+
+.textNews {
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  text-align: left;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.textNews2 {
+  color: rgb(59, 59, 59);
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: left;
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*......................................................... */
+
+/* FOOTER
+  ......................................................... */
+/* Style the copyrights text */
+.copyrights{
+  color: black;
+  font-size: 16 px;
+}
+
+/* Remove the list bullets */
+.firstList ul{
+  list-style-type: none;
+  list-style: none;
+  font-size: 16px;
+}
+
+.secondList ul{
+  list-style-type: none;
+  list-style: none;
+  font-size: 16px;
+}
+/* Change text color on hoven */
+.firstList a{
+  color: black;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+
+.secondList a{
+  color: black;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+
+.firstList a:hover{
+  color: #c8d819;
+}
+
+.secondList a:hover{
+  color: #c8d819;
+}
+
+.firstList a:link{
+  text-decoration: none;
+}
+
+.secondList a:link{
+  text-decoration: none;
+}
+
+/* Style the socials */
+.iconsFooter{
+  justify-content: center;
+}
+  /*......................................................... */
+
+
+  

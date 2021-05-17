@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Styles/style.css">
+        <script src="Javascript/slider.js"></script>
+        <title>Julie's web project</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <!-- Brand logo -->
+            <img class="logo" src="Images/bauhaus logo.png" alt="bauhaus logo">
+                    
+            
+            <!-- Contact container -->
+            <address class="call-us"> 
+               call us:
+                <span class="phone-number">
+                   (+012) 3456 78 91 011
+                </span>
+            </address>
+              
+            <!-- Social media container -->
+            <div class="socials">
+                <img class="icon" src="Images/twitter.png" alt="twitter">
+                <img class="icon" src="Images/facebook.png" alt="facebook">
+                <img class="icon" src="Images/google.png" alt="google">
+                <img class="icon" src="Images/linkedin.png" alt="linkedin">
+            </div>
+
+                <!-- menu container -->
+                <div class="menu">
+                    <div class="menu-text">menu</div>
+                    
+                    <!-- Dropdown menu-->
+                    <div class="dropdown">
+                        <button class="drop-button"> 
+                            <img src="Images/menu_icon.png" alt="menu_icon">
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">About</a>
+                            <a href="#">Services</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="row">
+            <div class="column">
+                <!-- Slideshow container-->
+                <div id="slider">
+                    <img src="Images/house1.png" alt="house1" id="slide">
+                    <div class="rectangle"></div>
+                    <div class="imageText">residential</div>
+                    <div class="imageTextBig">The luxury <br> residence in <br> forest</div>
+    
+                    <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+                    <div id="suivant" onclick="ChangeSlide(1)">></div>
+                </div>        
+            </div>
+        </div>
+
+        <!-- About section container -->
+        <div class="row about">
+            <!-- left column text -->
+            <div class="column left">
+                <div class="aboutUs">about us</div>
+                <div class="aboutBig">We Are The Leader In The Architectural</div>
+                <div class="aboutText">Lorem ipsum dolor sit amet. Et odit velit et omnis veritatis qui minima iusto et quod sequi? Qui minima nisi aut autem cupiditate ex voluptatem pariatur et accusantium saepe. Vel ducimus nesciunt et sequi iure vel optio laudantium non numquam atque aut dolores dolorem. Et assumenda numquam et sunt eaque aut temporibus odio id deleniti harum sed excepturi molestiae.</div>
+                <!-- experience row -->
+                <div class="row yearBig">
+                    <!-- <div class="column">
+                        <div class="experience-number">26</div>
+                    </div>
+                    <div class="column">
+                        <div class="experience-text">Years<br>Experience<br>Working</div> 
+                    </div> -->
+                </div>
+            </div>
+            <!-- right column image -->
+            <div class="column right">
+                <img class="imageAbt" src="Images/about img.jpg" alt="about image">
+            </div>
+        </div>
+
+        <!-- Projects title-->
+        <div class="row latest">
+                <div class="column latestProj">Latest Projects</div>
+                <div class="column all">All</div>
+                <div class="column building">Building</div>
+                <div class="column interior">Interior & Exterior</div>     
+        </div>
+
+        <!-- Projects gallery -->
+        <div class="row projects">
+            <div class="column gallery container">
+                <a target="_blank" href="Images/triangle_house.jpg">
+                  <img src="Images/triangle_house.jpg" alt="Triangle House" class="image">
+                </a>
+                <div class="overlay">
+                    <div class="text">Triangle <br>Concrete House</div>
+                    <div class="text2">Lorem ipsum dolor sit amet. A itaque ullam est voluptatibus doloremque.</div>
+                </div>
+              </div>
+              
+              <div class="column gallery container">
+                <a target="_blank" href="Images/dubai_hotel.jpg">
+                  <img src="Images/dubai_hotel.jpg" alt="Museum" class="image">
+                </a>
+                <div class="overlay">
+                    <div class="text">Gales <br> Building <br>Dubai</div>
+                    <div class="text2">Lorem ipsum dolor sit amet. A itaque ullam est voluptatibus doloremque.</div>
+                </div>
+              </div>
+              
+              <div class="column gallery container">
+                <a target="_blank" href="Images/museum.jpg">
+                  <img src="Images/museum.jpg" alt="museum" class="image">
+                </a>
+                <div class="overlay">
+                    <div class="text">Ocean <br>Museum <br>Italy</div>
+                    <div class="text2">Lorem ipsum dolor sit amet. A itaque ullam est voluptatibus doloremque.</div>
+                </div>
+              </div>
+              
+              <div class="column gallery container">
+                <a target="_blank" href="Images/building.png">
+                  <img src="Images/building.png" alt="building" class="image">
+                </a>
+                <div class="overlay">
+                    <div class="text">Milko <br>Working <br>Building</div>
+                    <div class="text2">Lorem ipsum dolor sit amet. A itaque ullam est voluptatibus doloremque.</div>
+                </div>
+              </div>           
+        </div>
+
+        <!-- news section -->
+        <div class="row news-title">Latest News</div>
+        <div class="row news">
+            <div class="column newsCol containerNews">
+                <a target="_blank" href="Images/img_news1.png">
+                    <img src="Images/img_news1.png" alt="news1" class="imageNews">
+                </a> 
+                <div class="overlayNews">
+                    <div class="textNews">Discover Architecture <br>Of Bario</div>
+                    <div class="textNews2">Lorem ipsum dolor sit amet. A itaque ullam est voluptatibus doloremque.</div>
+                  </div>
+            </div>
+            <div class="column newsCol containerNews">
+                <a target="_blank" href="Images/img_news2.png">
+                    <img src="Images/img_news2.png" alt="news2" class="imageNews">
+                </a> 
+                <div class="overlayNews">
+                    <div class="textNews">Discover Architecture <br>Of Bario</div>
+                    <div class="textNews2">Lorem ipsum dolor sit amet. A itaque ullam est voluptatibus doloremque.</div>
+                  </div>
+            </div>
+            <div class="column newsCol containerNews">
+                <a target="_blank" href="Images/img_news3.png">
+                    <img src="Images/img_news3.png" alt="news3" class="imageNews">
+                </a> 
+                <div class="overlayNews">
+                    <div class="textNews">Discover Architecture <br>Of Bario</div>
+                    <div class="textNews2">Lorem ipsum dolor sit amet. A itaque ullam est voluptatibus doloremque.</div>
+                  </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="column">
+                <img class="logo" src="Images/bauhaus logo.png" alt="bauhaus logo">
+            </div>
+            <div class="column copyrights">
+                © Bauhaus 2021 <br>All Rights Reserved
+            </div>
+            <!-- left list -->
+            <div class="column firstList">
+                <ul>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Term & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <!-- right list -->
+            <div class="column secondList">
+                <ul>
+                    <li><a href="#">Our Location</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- socials -->
+            <div class="column">
+                <div class="socials iconsFooter">
+                    <img class="icon" src="Images/twitter.png" alt="twitter">
+                    <img class="icon" src="Images/facebook.png" alt="facebook">
+                    <img class="icon" src="Images/google.png" alt="google">
+                    <img class="icon" src="Images/linkedin.png" alt="linkedin">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
